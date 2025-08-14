@@ -1,0 +1,17 @@
+{
+  "master_auto": {
+    "target_loudness": -14,
+    "widen": 0.12,
+    "denoise_strength": "auto"
+  },
+  "podcast_voice": {
+    "target_loudness": -16,
+    "widen": 0.02,
+    "denoise_strength": "high"
+  },
+  "music_track": {
+    "target_loudness": -12,
+    "widen": 0.18,
+    "denoise_strength": "medium"
+  }
+}

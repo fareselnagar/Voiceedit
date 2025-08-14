@@ -1,0 +1,15 @@
+Flask==2.2.5
+werkzeug==2.2.3
+librosa==0.10.1
+numpy==1.25.2
+scipy==1.11.3
+pydub==0.25.1
+soundfile==0.12.1
+noisereduce==2.0.1
+pyloudnorm==0.2.1
+spleeter==2.3.0
+torch==2.2.0
+demucs==4.0.0
+ffmpeg-python==0.2.1
+python-multipart==0.0.5
+tqdm==4.66.1

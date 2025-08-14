@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>مهندس الصوت التلقائي - متقدم</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>مهندس الصوت التلقائي — نسخة متقدمة</h1>
+    <p>ارفع ملف صوتي وسيتم تطبيق معالجة متقدمة (فصل مصادر، إزالة ضوضاء قوية، LUFS ثابت، EQ متعدد النطاقات، كومبريسور، ليمتر)</p>
+
+    <div class="card">
+      <label class="file-drop" id="drop-zone">
+        <input type="file" id="fileInput" accept="audio/*"/>
+        <div>اسحب وأسقط الملف هنا أو اضغط للاختيار</div>
+      </label>
+
+      <div class="controls">
+        <select id="preset">
+          {% for p in presets %}
+          <option value="{{p}}">{{p}}</option>
+          {% endfor %}
+        </select>
+        <button id="startBtn">ابدأ المعالجة</button>
+      </div>
+
+      <div id="progress" class="hidden">
+        <div id="status">جاري المعالجة...</div>
+        <progress id="prog" value="0" max="100"></progress>
+      </div>
+
+      <div id="preview" class="hidden">
+        <h3>معاينة قبل / بعد</h3>
+        <div>قبل: <audio id="before" controls></audio></div>
+        <div>بعد: <audio id="after" controls></audio></div>
+        <a id="downloadLink" href="#" download>تحميل النتيجة</a>
+      </div>
+    </div>
+
+    <footer>مبني على spleeter/demucs · pyloudnorm · noisereduce · ffmpeg</footer>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
